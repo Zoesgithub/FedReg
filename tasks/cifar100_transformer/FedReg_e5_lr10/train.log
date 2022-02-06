@@ -1,0 +1,708 @@
+2021-12-18 12:13:16.551 | INFO     | FedUtils.fed.fedreg_old:train:178 - Train with 500 workers...
+2021-12-18 12:13:16.561 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 0 --
+2021-12-18 12:18:02.175 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 12:18:02.176 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.011293837800621986
+2021-12-18 12:18:02.176 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.009999999776482582
+2021-12-18 12:18:02.177 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 12:18:02.177 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.011293837800621986
+2021-12-18 12:18:02.177 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.009999999776482582
+2021-12-18 12:44:05.784 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 1 --
+2021-12-18 12:48:07.146 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 12:48:07.149 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.20943135023117065
+2021-12-18 12:48:07.150 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.21310000121593475
+2021-12-18 12:48:07.150 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 12:48:07.150 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.20943135023117065
+2021-12-18 12:48:07.151 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.21310000121593475
+2021-12-18 13:14:34.214 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 2 --
+2021-12-18 13:19:19.281 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 13:19:19.282 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.44541311264038086
+2021-12-18 13:19:19.282 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.4546999931335449
+2021-12-18 13:19:19.282 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 13:19:19.284 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.44541311264038086
+2021-12-18 13:19:19.286 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.4546999931335449
+2021-12-18 13:46:20.900 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 3 --
+2021-12-18 13:50:13.642 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 13:50:13.643 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.57796710729599
+2021-12-18 13:50:13.644 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.578499972820282
+2021-12-18 13:50:13.644 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 13:50:13.644 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.57796710729599
+2021-12-18 13:50:13.645 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.578499972820282
+2021-12-18 14:18:00.968 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 4 --
+2021-12-18 14:22:42.630 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 14:22:42.631 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.7218149304389954
+2021-12-18 14:22:42.631 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.7287999987602234
+2021-12-18 14:22:42.631 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 14:22:42.631 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.7218149304389954
+2021-12-18 14:22:42.631 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.7287999987602234
+2021-12-18 14:48:12.899 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 5 --
+2021-12-18 14:53:26.343 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 14:53:26.349 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.5478501915931702
+2021-12-18 14:53:26.349 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.5640999674797058
+2021-12-18 14:53:26.349 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 14:53:26.350 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.5478501915931702
+2021-12-18 14:53:26.350 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.5640999674797058
+2021-12-18 15:19:34.269 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 6 --
+2021-12-18 15:23:56.373 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 15:23:56.377 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.496928870677948
+2021-12-18 15:23:56.379 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.5034999847412109
+2021-12-18 15:23:56.379 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 15:23:56.381 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.496928870677948
+2021-12-18 15:23:56.381 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.5034999847412109
+2021-12-18 15:51:13.781 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 7 --
+2021-12-18 15:55:34.411 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 15:55:34.413 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.4535367488861084
+2021-12-18 15:55:34.415 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.4603999853134155
+2021-12-18 15:55:34.415 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 15:55:34.415 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.4535367488861084
+2021-12-18 15:55:34.417 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.4603999853134155
+2021-12-18 16:21:45.301 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 8 --
+2021-12-18 16:26:16.941 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 16:26:16.942 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.4198533892631531
+2021-12-18 16:26:16.943 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.42479997873306274
+2021-12-18 16:26:16.943 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 16:26:16.944 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.4198533892631531
+2021-12-18 16:26:16.944 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.42479997873306274
+2021-12-18 16:51:46.676 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 9 --
+2021-12-18 16:57:29.316 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 16:57:29.317 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.6053100824356079
+2021-12-18 16:57:29.317 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.6119999885559082
+2021-12-18 16:57:29.318 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 16:57:29.318 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.6053100824356079
+2021-12-18 16:57:29.319 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.6119999885559082
+2021-12-18 17:24:25.542 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 10 --
+2021-12-18 17:28:14.383 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 17:28:14.398 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.5585496425628662
+2021-12-18 17:28:14.398 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.5661999583244324
+2021-12-18 17:28:14.399 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 17:28:14.399 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.5585496425628662
+2021-12-18 17:28:14.399 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.5661999583244324
+2021-12-18 17:55:42.093 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 11 --
+2021-12-18 17:59:12.392 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 17:59:12.394 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.5207054018974304
+2021-12-18 17:59:12.394 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.5282999873161316
+2021-12-18 17:59:12.395 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 17:59:12.395 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.5207054018974304
+2021-12-18 17:59:12.395 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.5282999873161316
+2021-12-18 18:26:15.195 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 12 --
+2021-12-18 18:30:08.691 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 18:30:08.694 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.5688527822494507
+2021-12-18 18:30:08.694 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.5819999575614929
+2021-12-18 18:30:08.694 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 18:30:08.695 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.5688527822494507
+2021-12-18 18:30:08.695 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.5819999575614929
+2021-12-18 18:58:01.911 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 13 --
+2021-12-18 19:00:52.878 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 19:00:52.879 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.6813948750495911
+2021-12-18 19:00:52.880 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.6836999654769897
+2021-12-18 19:00:52.880 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 19:00:52.880 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.6813948750495911
+2021-12-18 19:00:52.880 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.6836999654769897
+2021-12-18 19:26:06.605 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 14 --
+2021-12-18 19:28:55.101 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 19:28:55.103 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.800475537776947
+2021-12-18 19:28:55.104 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.802299976348877
+2021-12-18 19:28:55.105 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 19:28:55.107 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.800475537776947
+2021-12-18 19:28:55.108 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.802299976348877
+2021-12-18 19:55:29.435 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 15 --
+2021-12-18 20:00:22.108 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 20:00:22.110 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.7844263911247253
+2021-12-18 20:00:22.111 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.7907999753952026
+2021-12-18 20:00:22.111 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 20:00:22.113 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.7844263911247253
+2021-12-18 20:00:22.114 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.7907999753952026
+2021-12-18 20:27:24.767 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 16 --
+2021-12-18 20:30:53.721 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 20:30:53.723 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.7939370274543762
+2021-12-18 20:30:53.725 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.7965999841690063
+2021-12-18 20:30:53.725 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 20:30:53.726 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.7939370274543762
+2021-12-18 20:30:53.726 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.7965999841690063
+2021-12-18 20:57:46.299 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 17 --
+2021-12-18 21:01:36.075 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 21:01:36.078 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.6782246828079224
+2021-12-18 21:01:36.079 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.69159996509552
+2021-12-18 21:01:36.079 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 21:01:36.079 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.6782246828079224
+2021-12-18 21:01:36.080 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.69159996509552
+2021-12-18 21:27:47.261 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 18 --
+2021-12-18 21:32:33.014 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 21:32:33.016 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8068159222602844
+2021-12-18 21:32:33.016 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.814300000667572
+2021-12-18 21:32:33.017 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 21:32:33.017 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8068159222602844
+2021-12-18 21:32:33.017 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.814300000667572
+2021-12-18 21:58:56.556 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 19 --
+2021-12-18 22:02:35.582 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 22:02:35.583 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.7883891463279724
+2021-12-18 22:02:35.584 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.7914999723434448
+2021-12-18 22:02:35.585 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 22:02:35.585 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.7883891463279724
+2021-12-18 22:02:35.585 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.7914999723434448
+2021-12-18 22:30:01.185 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 20 --
+2021-12-18 22:35:17.848 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 22:35:17.850 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8292054533958435
+2021-12-18 22:35:17.853 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8352999687194824
+2021-12-18 22:35:17.853 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 22:35:17.854 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8292054533958435
+2021-12-18 22:35:17.855 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8352999687194824
+2021-12-18 23:01:53.240 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 21 --
+2021-12-18 23:05:07.528 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 23:05:07.529 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8369328379631042
+2021-12-18 23:05:07.529 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8432999849319458
+2021-12-18 23:05:07.529 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 23:05:07.530 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8369328379631042
+2021-12-18 23:05:07.530 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8432999849319458
+2021-12-18 23:30:36.276 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 22 --
+2021-12-18 23:33:16.014 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-18 23:33:16.015 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8422825336456299
+2021-12-18 23:33:16.015 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8445999622344971
+2021-12-18 23:33:16.016 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-18 23:33:16.016 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8422825336456299
+2021-12-18 23:33:16.016 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8445999622344971
+2021-12-19 00:00:30.398 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 23 --
+2021-12-19 00:05:05.987 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 00:05:05.988 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8515950441360474
+2021-12-19 00:05:05.989 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8561999797821045
+2021-12-19 00:05:05.990 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 00:05:05.990 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8515950441360474
+2021-12-19 00:05:05.990 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8561999797821045
+2021-12-19 00:31:43.077 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 24 --
+2021-12-19 00:35:41.349 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 00:35:41.352 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8521894216537476
+2021-12-19 00:35:41.353 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8562999963760376
+2021-12-19 00:35:41.353 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 00:35:41.355 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8521894216537476
+2021-12-19 00:35:41.356 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8562999963760376
+2021-12-19 01:03:03.219 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 25 --
+2021-12-19 01:07:10.190 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 01:07:10.191 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8474341034889221
+2021-12-19 01:07:10.191 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.851099967956543
+2021-12-19 01:07:10.192 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 01:07:10.192 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8474341034889221
+2021-12-19 01:07:10.192 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.851099967956543
+2021-12-19 01:34:01.892 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 26 --
+2021-12-19 01:40:32.040 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 01:40:32.041 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8573409914970398
+2021-12-19 01:40:32.041 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8610000014305115
+2021-12-19 01:40:32.041 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 01:40:32.042 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8573409914970398
+2021-12-19 01:40:32.042 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8610000014305115
+2021-12-19 02:06:16.366 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 27 --
+2021-12-19 02:10:52.267 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 02:10:52.274 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8615018725395203
+2021-12-19 02:10:52.274 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8649999499320984
+2021-12-19 02:10:52.275 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 02:10:52.275 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8615018725395203
+2021-12-19 02:10:52.275 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8649999499320984
+2021-12-19 02:38:23.898 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 28 --
+2021-12-19 02:42:41.749 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 02:42:41.749 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8515950441360474
+2021-12-19 02:42:41.750 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8567999601364136
+2021-12-19 02:42:41.750 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 02:42:41.750 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8515950441360474
+2021-12-19 02:42:41.750 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8567999601364136
+2021-12-19 03:09:43.888 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 29 --
+2021-12-19 03:14:52.087 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 03:14:52.089 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8620963096618652
+2021-12-19 03:14:52.092 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8629999756813049
+2021-12-19 03:14:52.092 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 03:14:52.093 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8620963096618652
+2021-12-19 03:14:52.094 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8629999756813049
+2021-12-19 03:41:38.513 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 30 --
+2021-12-19 03:45:02.900 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 03:45:02.904 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8618981838226318
+2021-12-19 03:45:02.906 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8643999695777893
+2021-12-19 03:45:02.906 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 03:45:02.908 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8618981838226318
+2021-12-19 03:45:02.911 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8643999695777893
+2021-12-19 04:10:48.013 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 31 --
+2021-12-19 04:16:31.186 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 04:16:31.187 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8676441311836243
+2021-12-19 04:16:31.187 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8691999912261963
+2021-12-19 04:16:31.187 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 04:16:31.187 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8676441311836243
+2021-12-19 04:16:31.188 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8691999912261963
+2021-12-19 04:43:17.442 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 32 --
+2021-12-19 04:47:35.905 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 04:47:35.906 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8654646277427673
+2021-12-19 04:47:35.906 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8700999617576599
+2021-12-19 04:47:35.907 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 04:47:35.907 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8654646277427673
+2021-12-19 04:47:35.910 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8700999617576599
+2021-12-19 05:14:01.825 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 33 --
+2021-12-19 05:18:02.612 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 05:18:02.613 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8690311312675476
+2021-12-19 05:18:02.614 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8736000061035156
+2021-12-19 05:18:02.614 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 05:18:02.614 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8690311312675476
+2021-12-19 05:18:02.615 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8736000061035156
+2021-12-19 05:45:19.154 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 34 --
+2021-12-19 05:49:42.798 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 05:49:42.799 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.856944739818573
+2021-12-19 05:49:42.800 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.864799976348877
+2021-12-19 05:49:42.800 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 05:49:42.800 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.856944739818573
+2021-12-19 05:49:42.800 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.864799976348877
+2021-12-19 06:16:02.742 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 35 --
+2021-12-19 06:20:15.096 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 06:20:15.103 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8702199459075928
+2021-12-19 06:20:15.104 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8752999901771545
+2021-12-19 06:20:15.104 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 06:20:15.104 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8702199459075928
+2021-12-19 06:20:15.104 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8752999901771545
+2021-12-19 06:47:02.295 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 36 --
+2021-12-19 06:50:21.590 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 06:50:21.592 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8636813759803772
+2021-12-19 06:50:21.594 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8725999593734741
+2021-12-19 06:50:21.594 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 06:50:21.594 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8636813759803772
+2021-12-19 06:50:21.595 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8725999593734741
+2021-12-19 07:18:01.666 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 37 --
+2021-12-19 07:23:12.163 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 07:23:12.166 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8682385683059692
+2021-12-19 07:23:12.167 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8737999796867371
+2021-12-19 07:23:12.167 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 07:23:12.167 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8682385683059692
+2021-12-19 07:23:12.168 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8737999796867371
+2021-12-19 07:49:51.419 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 38 --
+2021-12-19 07:55:37.156 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 07:55:37.158 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8636813759803772
+2021-12-19 07:55:37.158 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8679999709129333
+2021-12-19 07:55:37.158 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 07:55:37.159 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8636813759803772
+2021-12-19 07:55:37.160 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8679999709129333
+2021-12-19 08:20:13.343 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 39 --
+2021-12-19 08:24:05.574 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 08:24:05.575 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8723994493484497
+2021-12-19 08:24:05.575 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8763999938964844
+2021-12-19 08:24:05.575 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 08:24:05.575 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8723994493484497
+2021-12-19 08:24:05.576 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8763999938964844
+2021-12-19 08:51:31.578 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 40 --
+2021-12-19 08:55:42.242 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 08:55:42.243 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8634832501411438
+2021-12-19 08:55:42.243 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8657000064849854
+2021-12-19 08:55:42.243 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 08:55:42.244 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8634832501411438
+2021-12-19 08:55:42.244 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8657000064849854
+2021-12-19 09:22:32.100 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 41 --
+2021-12-19 09:26:57.161 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 09:26:57.163 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8684366941452026
+2021-12-19 09:26:57.163 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8730999827384949
+2021-12-19 09:26:57.163 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 09:26:57.163 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8684366941452026
+2021-12-19 09:26:57.163 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8730999827384949
+2021-12-19 09:54:12.669 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 42 --
+2021-12-19 09:59:07.429 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 09:59:07.431 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8791361451148987
+2021-12-19 09:59:07.431 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8810999989509583
+2021-12-19 09:59:07.431 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 09:59:07.431 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8791361451148987
+2021-12-19 09:59:07.432 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8810999989509583
+2021-12-19 10:25:41.588 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 43 --
+2021-12-19 10:30:48.918 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 10:30:48.919 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8704180717468262
+2021-12-19 10:30:48.920 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8747999668121338
+2021-12-19 10:30:48.920 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 10:30:48.920 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8704180717468262
+2021-12-19 10:30:48.921 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8747999668121338
+2021-12-19 10:57:05.628 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 44 --
+2021-12-19 11:00:35.404 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 11:00:35.406 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8763622045516968
+2021-12-19 11:00:35.406 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8817999958992004
+2021-12-19 11:00:35.406 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 11:00:35.407 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8763622045516968
+2021-12-19 11:00:35.407 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8817999958992004
+2021-12-19 11:26:40.584 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 45 --
+2021-12-19 11:30:53.757 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 11:30:53.760 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8789380192756653
+2021-12-19 11:30:53.761 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8862999677658081
+2021-12-19 11:30:53.761 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 11:30:53.763 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8789380192756653
+2021-12-19 11:30:53.764 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8862999677658081
+2021-12-19 11:57:51.978 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 46 --
+2021-12-19 12:02:36.057 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 12:02:36.058 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8682385683059692
+2021-12-19 12:02:36.059 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8740999698638916
+2021-12-19 12:02:36.059 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 12:02:36.059 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8682385683059692
+2021-12-19 12:02:36.061 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8740999698638916
+2021-12-19 12:29:59.463 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 47 --
+2021-12-19 12:33:59.603 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 12:33:59.604 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8739845752716064
+2021-12-19 12:33:59.605 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8798999786376953
+2021-12-19 12:33:59.605 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 12:33:59.605 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8739845752716064
+2021-12-19 12:33:59.606 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8798999786376953
+2021-12-19 12:59:30.048 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 48 --
+2021-12-19 13:04:22.424 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 13:04:22.426 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8708143830299377
+2021-12-19 13:04:22.426 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.870199978351593
+2021-12-19 13:04:22.426 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 13:04:22.426 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8708143830299377
+2021-12-19 13:04:22.427 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.870199978351593
+2021-12-19 13:31:45.974 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 49 --
+2021-12-19 13:36:12.831 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 13:36:12.833 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8767584562301636
+2021-12-19 13:36:12.834 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8786999583244324
+2021-12-19 13:36:12.834 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 13:36:12.834 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8767584562301636
+2021-12-19 13:36:12.835 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8786999583244324
+2021-12-19 14:03:37.245 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 50 --
+2021-12-19 14:08:05.708 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 14:08:05.710 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8718050718307495
+2021-12-19 14:08:05.710 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8741999864578247
+2021-12-19 14:08:05.710 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 14:08:05.711 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8718050718307495
+2021-12-19 14:08:05.712 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8741999864578247
+2021-12-19 14:34:39.085 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 51 --
+2021-12-19 14:39:02.058 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 14:39:02.060 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8761640787124634
+2021-12-19 14:39:02.063 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8809999823570251
+2021-12-19 14:39:02.063 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 14:39:02.065 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8761640787124634
+2021-12-19 14:39:02.065 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8809999823570251
+2021-12-19 15:04:38.768 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 52 --
+2021-12-19 15:09:30.551 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 15:09:30.552 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8662571907043457
+2021-12-19 15:09:30.553 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8687999844551086
+2021-12-19 15:09:30.553 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 15:09:30.553 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8662571907043457
+2021-12-19 15:09:30.553 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8687999844551086
+2021-12-19 15:36:44.793 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 53 --
+2021-12-19 15:41:31.102 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 15:41:31.105 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8852784037590027
+2021-12-19 15:41:31.106 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8895999789237976
+2021-12-19 15:41:31.106 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 15:41:31.108 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8852784037590027
+2021-12-19 15:41:31.109 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8895999789237976
+2021-12-19 16:08:00.823 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 54 --
+2021-12-19 16:13:00.811 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 16:13:00.815 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8743808269500732
+2021-12-19 16:13:00.815 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8797000050544739
+2021-12-19 16:13:00.815 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 16:13:00.818 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8743808269500732
+2021-12-19 16:13:00.818 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8797000050544739
+2021-12-19 16:39:27.859 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 55 --
+2021-12-19 16:44:06.377 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 16:44:06.380 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8813156485557556
+2021-12-19 16:44:06.381 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8840999603271484
+2021-12-19 16:44:06.381 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 16:44:06.381 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8813156485557556
+2021-12-19 16:44:06.381 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8840999603271484
+2021-12-19 17:10:23.026 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 56 --
+2021-12-19 17:15:31.493 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 17:15:31.495 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8825044631958008
+2021-12-19 17:15:31.497 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8840000033378601
+2021-12-19 17:15:31.498 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 17:15:31.499 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8825044631958008
+2021-12-19 17:15:31.499 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8840000033378601
+2021-12-19 17:42:11.864 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 57 --
+2021-12-19 17:46:03.063 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 17:46:03.065 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8793342709541321
+2021-12-19 17:46:03.065 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8840000033378601
+2021-12-19 17:46:03.066 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 17:46:03.066 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8793342709541321
+2021-12-19 17:46:03.067 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8840000033378601
+2021-12-19 18:12:57.110 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 58 --
+2021-12-19 18:17:06.346 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 18:17:06.348 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8787398338317871
+2021-12-19 18:17:06.348 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.882599949836731
+2021-12-19 18:17:06.348 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 18:17:06.349 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8787398338317871
+2021-12-19 18:17:06.349 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.882599949836731
+2021-12-19 18:43:41.780 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 59 --
+2021-12-19 18:47:25.085 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 18:47:25.087 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8789380192756653
+2021-12-19 18:47:25.088 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8818999528884888
+2021-12-19 18:47:25.088 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 18:47:25.088 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8789380192756653
+2021-12-19 18:47:25.088 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8818999528884888
+2021-12-19 19:13:36.549 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 60 --
+2021-12-19 19:19:07.103 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 19:19:07.104 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.875371515750885
+2021-12-19 19:19:07.104 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.882599949836731
+2021-12-19 19:19:07.105 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 19:19:07.105 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.875371515750885
+2021-12-19 19:19:07.105 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.882599949836731
+2021-12-19 19:45:35.063 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 61 --
+2021-12-19 19:50:05.098 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 19:50:05.099 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8793342709541321
+2021-12-19 19:50:05.100 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8858000040054321
+2021-12-19 19:50:05.100 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 19:50:05.101 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8793342709541321
+2021-12-19 19:50:05.101 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8858000040054321
+2021-12-19 20:16:43.326 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 62 --
+2021-12-19 20:19:56.844 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 20:19:56.846 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8874579071998596
+2021-12-19 20:19:56.846 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8920999765396118
+2021-12-19 20:19:56.846 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 20:19:56.847 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8874579071998596
+2021-12-19 20:19:56.847 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8920999765396118
+2021-12-19 20:46:22.426 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 63 --
+2021-12-19 20:50:23.676 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 20:50:23.685 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8676441311836243
+2021-12-19 20:50:23.685 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8787999749183655
+2021-12-19 20:50:23.685 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 20:50:23.686 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8676441311836243
+2021-12-19 20:50:23.686 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8787999749183655
+2021-12-19 21:16:34.187 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 64 --
+2021-12-19 21:21:12.076 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 21:21:12.077 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8757677674293518
+2021-12-19 21:21:12.078 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8815000057220459
+2021-12-19 21:21:12.078 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 21:21:12.078 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8757677674293518
+2021-12-19 21:21:12.079 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8815000057220459
+2021-12-19 21:47:46.707 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 65 --
+2021-12-19 21:52:51.637 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 21:52:51.643 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8783435821533203
+2021-12-19 21:52:51.643 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8860999941825867
+2021-12-19 21:52:51.644 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 21:52:51.644 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8783435821533203
+2021-12-19 21:52:51.644 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8860999941825867
+2021-12-19 22:19:20.868 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 66 --
+2021-12-19 22:23:43.686 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 22:23:43.688 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8795323967933655
+2021-12-19 22:23:43.690 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.886199951171875
+2021-12-19 22:23:43.690 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 22:23:43.692 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8795323967933655
+2021-12-19 22:23:43.692 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.886199951171875
+2021-12-19 22:50:13.567 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 67 --
+2021-12-19 22:54:04.385 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 22:54:04.387 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8842877149581909
+2021-12-19 22:54:04.388 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8863999843597412
+2021-12-19 22:54:04.389 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 22:54:04.389 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8842877149581909
+2021-12-19 22:54:04.389 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8863999843597412
+2021-12-19 23:21:29.569 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 68 --
+2021-12-19 23:25:10.731 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 23:25:10.733 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8787398338317871
+2021-12-19 23:25:10.733 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.887499988079071
+2021-12-19 23:25:10.734 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 23:25:10.734 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8787398338317871
+2021-12-19 23:25:10.735 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.887499988079071
+2021-12-19 23:51:59.369 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 69 --
+2021-12-19 23:56:16.843 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-19 23:56:16.845 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8795323967933655
+2021-12-19 23:56:16.845 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8845999836921692
+2021-12-19 23:56:16.846 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-19 23:56:16.846 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8795323967933655
+2021-12-19 23:56:16.846 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8845999836921692
+2021-12-20 00:22:39.090 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 70 --
+2021-12-20 00:26:12.949 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 00:26:12.950 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8825044631958008
+2021-12-20 00:26:12.951 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8888999819755554
+2021-12-20 00:26:12.951 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 00:26:12.951 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8825044631958008
+2021-12-20 00:26:12.951 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8888999819755554
+2021-12-20 00:54:15.838 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 71 --
+2021-12-20 00:58:13.016 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 00:58:13.017 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8777491450309753
+2021-12-20 00:58:13.017 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8834999799728394
+2021-12-20 00:58:13.018 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 00:58:13.018 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8777491450309753
+2021-12-20 00:58:13.018 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8834999799728394
+2021-12-20 01:24:56.360 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 72 --
+2021-12-20 01:30:20.073 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 01:30:20.074 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8769566416740417
+2021-12-20 01:30:20.075 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8822000026702881
+2021-12-20 01:30:20.075 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 01:30:20.075 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8769566416740417
+2021-12-20 01:30:20.076 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8822000026702881
+2021-12-20 01:56:58.683 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 73 --
+2021-12-20 02:02:04.456 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 02:02:04.457 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8848820924758911
+2021-12-20 02:02:04.457 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8896999955177307
+2021-12-20 02:02:04.458 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 02:02:04.458 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8848820924758911
+2021-12-20 02:02:04.458 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8896999955177307
+2021-12-20 02:28:08.832 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 74 --
+2021-12-20 02:33:18.523 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 02:33:18.524 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8856746554374695
+2021-12-20 02:33:18.525 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8854999542236328
+2021-12-20 02:33:18.525 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 02:33:18.525 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8856746554374695
+2021-12-20 02:33:18.525 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8854999542236328
+2021-12-20 03:00:57.125 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 75 --
+2021-12-20 03:05:47.776 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 03:05:47.777 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8827025890350342
+2021-12-20 03:05:47.778 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8853999972343445
+2021-12-20 03:05:47.778 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 03:05:47.778 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8827025890350342
+2021-12-20 03:05:47.779 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8853999972343445
+2021-12-20 03:33:04.169 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 76 --
+2021-12-20 03:37:24.563 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 03:37:24.564 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8763622045516968
+2021-12-20 03:37:24.564 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8783999681472778
+2021-12-20 03:37:24.564 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 03:37:24.565 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8763622045516968
+2021-12-20 03:37:24.565 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8783999681472778
+2021-12-20 04:04:40.625 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 77 --
+2021-12-20 04:09:25.408 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 04:09:25.409 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8819100856781006
+2021-12-20 04:09:25.409 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8859999775886536
+2021-12-20 04:09:25.409 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 04:09:25.409 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8819100856781006
+2021-12-20 04:09:25.410 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8859999775886536
+2021-12-20 04:36:23.922 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 78 --
+2021-12-20 04:40:35.247 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 04:40:35.248 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.883693277835846
+2021-12-20 04:40:35.248 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8885999917984009
+2021-12-20 04:40:35.249 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 04:40:35.249 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.883693277835846
+2021-12-20 04:40:35.249 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8885999917984009
+2021-12-20 05:08:11.586 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 79 --
+2021-12-20 05:11:49.107 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 05:11:49.108 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8844858407974243
+2021-12-20 05:11:49.111 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.88919997215271
+2021-12-20 05:11:49.111 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 05:11:49.112 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8844858407974243
+2021-12-20 05:11:49.113 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.88919997215271
+2021-12-20 05:39:01.665 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 80 --
+2021-12-20 05:43:51.821 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 05:43:51.822 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8751733899116516
+2021-12-20 05:43:51.823 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8804999589920044
+2021-12-20 05:43:51.823 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 05:43:51.824 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8751733899116516
+2021-12-20 05:43:51.824 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8804999589920044
+2021-12-20 06:10:47.644 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 81 --
+2021-12-20 06:15:04.366 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 06:15:04.368 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8854765295982361
+2021-12-20 06:15:04.370 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8907999992370605
+2021-12-20 06:15:04.370 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 06:15:04.371 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8854765295982361
+2021-12-20 06:15:04.372 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8907999992370605
+2021-12-20 06:41:26.621 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 82 --
+2021-12-20 06:45:20.110 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 06:45:20.111 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8856746554374695
+2021-12-20 06:45:20.114 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.889799952507019
+2021-12-20 06:45:20.114 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 06:45:20.114 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8856746554374695
+2021-12-20 06:45:20.115 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.889799952507019
+2021-12-20 07:12:24.537 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 83 --
+2021-12-20 07:17:09.875 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 07:17:09.876 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8884485960006714
+2021-12-20 07:17:09.879 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8952999711036682
+2021-12-20 07:17:09.879 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 07:17:09.880 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8884485960006714
+2021-12-20 07:17:09.881 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8952999711036682
+2021-12-20 07:44:12.320 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 84 --
+2021-12-20 07:47:49.811 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 07:47:49.812 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8914206624031067
+2021-12-20 07:47:49.813 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.895799994468689
+2021-12-20 07:47:49.813 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 07:47:49.813 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8914206624031067
+2021-12-20 07:47:49.813 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.895799994468689
+2021-12-20 08:15:28.821 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 85 --
+2021-12-20 08:19:51.864 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 08:19:51.866 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8791361451148987
+2021-12-20 08:19:51.866 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8919999599456787
+2021-12-20 08:19:51.867 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 08:19:51.867 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8791361451148987
+2021-12-20 08:19:51.867 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8919999599456787
+2021-12-20 08:45:49.388 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 86 --
+2021-12-20 08:50:27.743 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 08:50:27.745 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8829007148742676
+2021-12-20 08:50:27.745 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8887999653816223
+2021-12-20 08:50:27.745 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 08:50:27.746 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8829007148742676
+2021-12-20 08:50:27.746 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8887999653816223
+2021-12-20 09:17:33.830 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 87 --
+2021-12-20 09:22:17.107 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 09:22:17.108 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8819100856781006
+2021-12-20 09:22:17.110 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.886199951171875
+2021-12-20 09:22:17.110 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 09:22:17.112 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8819100856781006
+2021-12-20 09:22:17.114 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.886199951171875
+2021-12-20 09:49:01.833 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 88 --
+2021-12-20 09:52:21.190 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 09:52:21.191 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8870616555213928
+2021-12-20 09:52:21.192 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8921999931335449
+2021-12-20 09:52:21.192 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 09:52:21.192 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8870616555213928
+2021-12-20 09:52:21.192 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8921999931335449
+2021-12-20 10:19:39.405 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 89 --
+2021-12-20 10:23:17.499 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 10:23:17.500 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8805230855941772
+2021-12-20 10:23:17.500 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8868999481201172
+2021-12-20 10:23:17.500 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 10:23:17.500 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8805230855941772
+2021-12-20 10:23:17.500 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8868999481201172
+2021-12-20 10:50:41.698 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 90 --
+2021-12-20 10:54:45.508 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 10:54:45.510 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8842877149581909
+2021-12-20 10:54:45.511 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8921999931335449
+2021-12-20 10:54:45.511 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 10:54:45.512 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8842877149581909
+2021-12-20 10:54:45.514 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8921999931335449
+2021-12-20 11:21:14.741 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 91 --
+2021-12-20 11:24:53.935 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 11:24:53.937 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8811175227165222
+2021-12-20 11:24:53.938 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8883000016212463
+2021-12-20 11:24:53.938 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 11:24:53.938 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8811175227165222
+2021-12-20 11:24:53.941 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8883000016212463
+2021-12-20 11:52:31.769 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 92 --
+2021-12-20 11:57:15.078 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 11:57:15.081 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.883693277835846
+2021-12-20 11:57:15.082 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8958999514579773
+2021-12-20 11:57:15.082 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 11:57:15.082 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.883693277835846
+2021-12-20 11:57:15.082 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8958999514579773
+2021-12-20 12:24:13.647 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 93 --
+2021-12-20 12:29:01.594 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 12:29:01.595 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8840895891189575
+2021-12-20 12:29:01.596 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8924999833106995
+2021-12-20 12:29:01.596 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 12:29:01.596 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8840895891189575
+2021-12-20 12:29:01.598 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8924999833106995
+2021-12-20 12:55:34.393 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 94 --
+2021-12-20 13:01:32.036 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 13:01:32.037 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.881513774394989
+2021-12-20 13:01:32.037 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8895999789237976
+2021-12-20 13:01:32.037 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 13:01:32.038 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.881513774394989
+2021-12-20 13:01:32.038 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8895999789237976
+2021-12-20 13:27:07.170 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 95 --
+2021-12-20 13:31:46.752 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 13:31:46.753 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8846839666366577
+2021-12-20 13:31:46.755 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8944000005722046
+2021-12-20 13:31:46.755 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 13:31:46.756 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8846839666366577
+2021-12-20 13:31:46.757 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8944000005722046
+2021-12-20 13:59:46.682 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 96 --
+2021-12-20 14:02:53.493 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 14:02:53.495 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8872597813606262
+2021-12-20 14:02:53.495 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8950999975204468
+2021-12-20 14:02:53.495 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 14:02:53.495 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8872597813606262
+2021-12-20 14:02:53.495 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8950999975204468
+2021-12-20 14:29:46.446 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 97 --
+2021-12-20 14:33:22.354 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 14:33:22.356 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8856746554374695
+2021-12-20 14:33:22.358 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8976999521255493
+2021-12-20 14:33:22.358 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 14:33:22.360 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8856746554374695
+2021-12-20 14:33:22.360 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8976999521255493
+2021-12-20 15:00:20.544 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 98 --
+2021-12-20 15:04:48.255 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 15:04:48.256 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.883693277835846
+2021-12-20 15:04:48.259 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8928999900817871
+2021-12-20 15:04:48.259 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 15:04:48.261 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.883693277835846
+2021-12-20 15:04:48.262 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8928999900817871
+2021-12-20 15:32:20.908 | INFO     | FedUtils.fed.fedreg_old:train:185 - -- Log At Round 99 --
+2021-12-20 15:36:50.512 | INFO     | FedUtils.fed.fedreg_old:train:191 - -- TEST RESULTS --
+2021-12-20 15:36:50.513 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8825044631958008
+2021-12-20 15:36:50.514 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8894000053405762
+2021-12-20 15:36:50.514 | INFO     | FedUtils.fed.fedreg_old:train:193 - -- TRAIN RESULTS --
+2021-12-20 15:36:50.514 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8825044631958008
+2021-12-20 15:36:50.514 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8894000053405762
+2021-12-20 16:04:14.300 | INFO     | FedUtils.fed.fedreg_old:train:231 - -- Log At Round 99 --
+2021-12-20 16:08:24.156 | INFO     | FedUtils.fed.fedreg_old:train:237 - -- TEST RESULTS --
+2021-12-20 16:08:24.157 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8884485960006714
+2021-12-20 16:08:24.158 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8947999477386475
+2021-12-20 16:08:24.158 | INFO     | FedUtils.fed.fedreg_old:train:239 - -- TRAIN RESULTS --
+2021-12-20 16:08:24.158 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_0 Accuracy: 0.8884485960006714
+2021-12-20 16:08:24.161 | INFO     | FedUtils.models.utils:decode_stat:157 - Test_1 Accuracy: 0.8947999477386475
