@@ -2,7 +2,7 @@ from FedUtils.models.cifar10.resnet9 import Model
 import torch
 from functools import partial
 from FedUtils.fed.fedavg_sgd import FedAvg
-from torchvision import transforms, utils
+from torchvision import transforms
 
 transform_train = transforms.Compose([
     transforms.RandomCrop(32, padding=4),
