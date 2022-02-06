@@ -10,7 +10,7 @@ Federated learning (FL) enables distributed optimization of machine learning mod
 
 Anaconda is recommended to run the project.
 ~~~
-conda create -n FedReg python=3.7
+conda create -n FedReg python=3.8
 source activate FedReg
 ~~~
 
@@ -37,6 +37,6 @@ python main.py -c PATH_TO_CONFIG
 ~~~
 For example:
 ~~~
-python main.py -c tasks/mnist/FedReg/config
+python main.py -c tasks/mnist/FedReg_e40_lr1_g4/config
 ~~~
 Please refer to *config_example.py* for the format of the config file. In the "tasks" directory, the config files for all the tasks presented in our paper are provided.
