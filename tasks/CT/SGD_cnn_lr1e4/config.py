@@ -1,7 +1,7 @@
 from FedUtils.models.CT.cnn_parallel import Model
 import torch
 from functools import partial
-from FedUtils.fed.fedavg import FedAvg
+from FedUtils.fed.fedavg_sgd import FedAvg
 from torchvision import transforms, utils
 
 normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
