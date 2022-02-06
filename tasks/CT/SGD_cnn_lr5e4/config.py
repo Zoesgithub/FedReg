@@ -25,7 +25,7 @@ config = {
 
     "seed": 1,
     "model": Model,
-    "inner_opt": partial(torch.optim.SGD, lr=1e-4, weight_decay=0),
+    "inner_opt": partial(torch.optim.SGD, lr=5e-4, weight_decay=0),
     "optimizer": FedAvg,
     "model_param": (),
     "inp_size": (3*128*128,),
@@ -38,7 +38,7 @@ config = {
     "num_epochs": 1,
     "batch_size": 100000,
     "use_fed": 1,
-    "log_path": "tasks/CT/SGD_cnn_lr1e4/train.log",
+    "log_path": "tasks/CT/SGD_cnn_lr5e4/train.log",
     "train_transform": transform_train,
     "test_transform": transform_test,
     "eval_train": True,
