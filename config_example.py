@@ -21,10 +21,10 @@ config = {
     "batch_size": 10,  # the batch size in local training stage
     "use_fed": 1,  # whether use federated learning alrogithms
     "log_path": "tasks/mnist/FedReg/train.log",  # the path to save the log file
-    "train_transform": None,  # the preprocess of train data, please refer to torchvision.transforms
-    "test_transform": None,  # the preprocess of test dasta
+    "train_transform": None,  # the preprocessing of train data, please refer to torchvision.transforms
+    "test_transform": None,  # the preprocessing of test dasta
     "eval_train": True,  # whether to evaluate the model performance on the training data. Recommend to False when the training dataset is too large
-    "gamma": 0.5,  # the value of gamma
+    "gamma": 0.5,  # the value of gamma when FedReg is used, the weight for the proximal term when FedProx is used, or the value of lambda when FedCurv is used
     "eta_s": -5e-1,  # the value of eta_s
 
 
