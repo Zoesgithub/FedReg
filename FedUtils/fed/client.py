@@ -38,23 +38,11 @@ class Client(object):
         bytes_r = self.model.size
         return ((self.num_train_samples, grads), (bytes_w, comp, bytes_r))
 
-    def solve_inner(self, num_epochs=1, extra_loss=None, step_func=None):
+    def solve_inner(self, num_epochs=1, step_func=None):
         bytes_w = self.model.size
-        soln, comp, weight = self.model.solve_inner(self.train_data, num_epochs, extra_loss, step_func=step_func)
+        soln, comp, weight = self.model.solve_inner(self.train_data, num_epochs=num_epochs, step_func=step_func)
         bytes_r = self.model.size
         return (self.num_train_samples*weight, soln), (bytes_w, comp, bytes_r)
-
-    def solve_iters(self, num_iters=1):
-        bytes_w = self.model.size
-        for _ in range(num_iters):
-            try:
-                data = next(self.train_iter)
-            except:
-                self.train_iter = iter(self.train_data)
-                data = next(self.train_iter)
-            soln, comp = self.model.solve_iters(data)
-        bytes_r = self.model.size
-        return (self.num_train_samples, soln), (bytes_w, comp, bytes_r)
 
     def test(self):
         TC = []

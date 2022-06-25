@@ -2,6 +2,26 @@ from .server import Server
 from loguru import logger
 import numpy as np
 from FedUtils.models.utils import decode_stat
+import torch
+
+
+def step_func(model, data):
+    lr = model.learning_rate
+    parameters = list(model.parameters())
+    flop = model.flop
+
+    def func(d):
+        nonlocal flop, lr
+        model.train()
+        model.zero_grad()
+        x, y = d
+        pred = model.forward(x)
+        loss = model.loss(pred, y).mean()
+        grad = torch.autograd.grad(loss, parameters)
+        for p, g in zip(parameters, grad):
+            p.data.add_(-lr*g)
+        return flop*len(x)
+    return func
 
 
 class FedAvg(Server):
@@ -30,7 +50,7 @@ class FedAvg(Server):
 
             for idx, c in enumerate(active_clients):
                 c.set_param(self.model.get_param())
-                soln, stats = c.solve_inner(num_epochs=self.num_epochs)  # stats has (byte w, comp, byte r)
+                soln, stats = c.solve_inner(num_epochs=self.num_epochs, step_func=step_func)  # stats has (byte w, comp, byte r)
                 soln = [1.0, soln[1]]
                 w += soln[0]
                 if len(csolns) == 0:

@@ -5,169 +5,83 @@ from FedUtils.models.utils import decode_stat
 import torch
 from functools import partial
 import copy
-import torch.nn as nn
 
 
-def get_params(model):
-    ret = []
-    for g in model.optimizer.param_groups:
-        for p in g["params"]:
-            ret.append(p)
-    return ret
+def step_func(model, data, fed):
+    lr = model.learning_rate
+    parameters = list(model.parameters())
+    flop = model.flop
+    gamma = fed.gamma
+    add_mask = fed.add_mask
+    beta = 0.5
 
-
-def set_params(nmodel, pmodel, rate=10.0):
-    nparams = get_params(nmodel)
-    pparams = get_params(pmodel)
-    for pn, pp in zip(nparams, pparams):
-        r = torch.rand(pp.shape).cuda() / rate
-        pn.data.mul_(r).add_((1 - r) * pp)
-
-
-def step_func(model, data, epochs, lr, gamma, eta_s, add_mask):
-    def loss_func_nosoft(pred, gt):
-        if len(gt.shape) < 2:
-            gt = nn.functional.one_hot(gt.long(), pred.shape[-1]).float()
-        assert len(gt.shape) == len(pred.shape)
-        loss = -gt * torch.log(pred + 1e-30)
-        loss = loss.sum(1)
-        return loss
-
-    def loss_func(pred, gt):
-        pred = nn.Softmax(-1)(pred)
-        return loss_func_nosoft(pred, gt)
-
-    def mkfd(d, eta_s, size,  nmodel, reverse=False):
-        nmodel.eval()
-
-        fnx, fny = d
-        if nmodel.cuda:
-            fnx, fny = fnx.cuda(), fny.cuda()
-        fd = []
-        for _ in range(size):
-            fnx.requires_grad = True
-            npred = nmodel(fnx)
-            if reverse:
-                dnx = -torch.autograd.grad(loss_func(npred, (1.0-nn.functional.one_hot(fny.long(), npred.shape[-1]))/(npred.shape[-1]-1.0)).mean(), fnx)[0]
-            else:
-                dnx = torch.autograd.grad(loss_func(npred, fny).mean(), fnx)[0]
-            fnx = (fnx-eta_s*torch.sign(dnx)).detach().clamp(float(fnx.min().detach().cpu().numpy()), float(fnx.max().detach().cpu().numpy()))
-            with torch.no_grad():
-                ffny = nn.Softmax(-1)(nmodel(fnx))
-                fd.append([fnx, fny, ffny.detach()])
-        return fd
-    comp = 0
-    plosses = 0
-
-    now_model = copy.deepcopy(model)
-    current_m = copy.deepcopy(model)
-    penalty_m = copy.deepcopy(model)
-
-    now_params = get_params(now_model)
-    cur_params = get_params(current_m)
-    pen_params = get_params(penalty_m)
-
-    params = get_params(model)
-    fakedata0 = []
-    fakedata1 = []
+    psuedo_data, perturb_data = [], []
     for d in data:
-        fakedata0 = fakedata0+[mkfd(d, eta_s, 10,  now_model)[-1]]
-        fakedata1 = fakedata1+[mkfd(d, eta_s/100.0, 10,  now_model)[-1]]
+        x, y = d
+        psuedo, perturb = fed.model.generate_fake(x, y)
+        psuedo_data.append(psuedo)
+        perturb_data.append(perturb)
+    idx = 0
+    median_model, old_model, penal_model = copy.deepcopy(fed.model), copy.deepcopy(fed.model), copy.deepcopy(fed.model)
+    median_parameters = list(median_model.parameters())
+    old_parameters = list(old_model.parameters())
+    penal_parameters = list(penal_model.parameters())
 
-    tmp = 0
-    s2tmp = 0
-    fidx = 0
-    model.eval()
-    now_model.eval()
-    current_m.train()
-    penalty_m.train()
+    def func(d):
+        nonlocal idx, add_mask, beta, flop, gamma, lr
+        model.train()
+        median_model.train()
+        penal_model.train()
+        model.zero_grad()
+        median_model.zero_grad()
+        penal_model.zero_grad()
 
-    for e in range(epochs):
+        x, y = d
+        psd, ptd = psuedo_data[idx % len(psuedo_data)], perturb_data[idx % len(perturb_data)]
+        idx += 1
 
-        for i, d in zip(range(len(data)), data):
-            x, y = d
-            if model.cuda:
-                x, y = x.cuda(), y.cuda()
-            for _ in range(1):
-                fnx, fny0, fny = fakedata0[fidx % len(fakedata0)]
-                fnx1, fny1, _ = fakedata1[fidx % len(fakedata0)]
-                # estimate running statistics
-                '''model.train()
-                model(x)
-                model.eval()
-                s1 = model.state_dict()
-                s2 = current_m.state_dict()
-                s3 = penalty_m.state_dict()
-                for name in s1:
-                    if "running" in name:
-                        s2[name].data.copy_(s1[name])
-                        s3[name].data.copy_(s1[name])
-                current_m.load_state_dict(s2)
-                penalty_m.load_state_dict(s3)
-                current_m.eval()
-                penalty_m.eval()'''
-                ########
-                for p, c, n in zip(params, cur_params, now_params):
-                    c.data.copy_(gamma*p+(1-gamma)*n)
+        for p, m, o in zip(parameters, median_parameters, old_parameters):
+            m.data.copy_(gamma*p+(1-gamma)*o)
 
-                closs = loss_func(current_m(x), y).mean()
-                grad1 = torch.autograd.grad(closs, cur_params)
+        mloss = median_model.loss(median_model(x), y).mean()
+        grad1 = torch.autograd.grad(mloss, median_parameters)
 
-                if add_mask > 0:
-                    if len(data) > 1:
-                        fnx2, fny20, fny2 = mkfd([x, y], eta_s, 10, now_model)[-1]
-                        mask_grad = torch.autograd.grad(loss_func(current_m(fnx2),
-                                                                  (1.0-0*nn.functional.one_hot(fny20.long(), fny2.shape[-1]))/(fny2.shape[-1])).mean(), cur_params)
-                    else:
-                        mask_grad = torch.autograd.grad(loss_func(current_m(fnx),
-                                                                  (1.0-0*nn.functional.one_hot(fny0.long(), fny.shape[-1]))/(fny.shape[-1])).mean(), cur_params)
-                    s2 = sum([(g2 * g2).sum() for g2 in mask_grad])
-                    w = (sum([(g0 * g2).sum() for g0, g2 in zip(grad1, mask_grad)])) / s2.add(1e-30)
-                    grad1 = [a-w*b for a, b in zip(grad1, mask_grad)]
+        if add_mask > 0:
+            fnx, fny, pred_fny = old_model.generate_fake(x, y)[0]
+            avg_fny = (1.0-0*pred_fny)/pred_fny.shape[-1]
+            mask_grad = torch.autograd.grad(median_model.loss(median_model(fnx), avg_fny).mean(), median_parameters)
 
-                for g1, p in zip(grad1, params):
-                    p.data.add_(-lr*g1)
-                beta = 0.5
-                for c, g1, p, n, pp in zip(cur_params, grad1, params, now_params, pen_params):
-                    pp.data.copy_(p*beta+n*(1-beta))
-                fidx += 1
+            sm = sum([(gm * gm).sum() for gm in mask_grad])
+            sw = (sum([(g1 * gm).sum() for g1, gm in zip(grad1, mask_grad)])) / sm.add(1e-30)
+            grad1 = [a-sw*b for a, b in zip(grad1, mask_grad)]
 
-                ploss = loss_func(penalty_m(fnx), fny)
-                grad2 = torch.autograd.grad(ploss.mean(), pen_params)
+        for g1, p in zip(grad1, parameters):
+            p.data.add_(-lr*g1)
 
-                with torch.no_grad():
-                    dtheta = [(p-n) for p, n in zip(params, now_params)]
+        for p, o, pp in zip(parameters, old_parameters, penal_parameters):
+            pp.data.copy_(p*beta+o*(1-beta))
 
-                s2 = sum([(g2*g2).sum() for g2 in grad2])
-                w = (sum([(g0*g2).sum() for g0, g2 in zip(dtheta, grad2)]))/s2.add(1e-30)
-                w = w.clamp(0.0, )
+        ploss = penal_model.loss(penal_model(psd[0]), psd[2]).mean()
+        grad2 = torch.autograd.grad(ploss, penal_parameters)
+        with torch.no_grad():
+            dtheta = [(p-o) for p, o in zip(parameters, old_parameters)]
+            s2 = sum([(g2*g2).sum() for g2 in grad2])
+            w = (sum([(g0*g2).sum() for g0, g2 in zip(dtheta, grad2)]))/s2.add(1e-30)
+            w = w.clamp(0.0, )
 
-                ploss_ = loss_func(penalty_m(fnx1), fny1)
-                grad3 = torch.autograd.grad(ploss_.mean(), pen_params)
-                s3 = sum([(g3*g3).sum() for g3 in grad3])
-                w1 = (sum([((g0-w*g2)*g3).sum() for g0, g2, g3 in zip(dtheta, grad2, grad3)]))/s3.add(1e-30)
-                w1 = w1.clamp(0.0,)
+        pertub_ploss = penal_model.loss(penal_model(ptd[0]), ptd[1]).mean()
+        grad3 = torch.autograd.grad(pertub_ploss, penal_parameters)
+        s3 = sum([(g3*g3).sum() for g3 in grad3])
+        w1 = (sum([((g0-w*g2)*g3).sum() for g0, g2, g3 in zip(dtheta, grad2, grad3)]))/s3.add(1e-30)
+        w1 = w1.clamp(0.0,)
 
-                tmp += w
-                s2tmp += s2
-
-                for g2, g3, p in zip(grad2, grad3, params):
-                    p.data.add_(-w*g2-w1*g3)
-
-            comp += model.flop * len(x)
-            plosses += closs
-    with torch.no_grad():
-        model.eval()
-        now_model.eval()
-        print(plosses / epochs, gamma, tmp/epochs, eta_s, w, loss_func(model(x), y).mean()-loss_func(now_model(x), y).mean(), len(data))
-    del now_model
-    del current_m
-    del penalty_m
-    return comp, 1.0
-
-
-def run_func(client, func, epochs):
-    return client.solve_inner(num_epochs=epochs, step_func=func)
+        for g2, g3, p in zip(grad2, grad3, parameters):
+            p.data.add_(-w*g2-w1*g3)
+        if add_mask:
+            return flop*len(x)*4  # only consider the flop in NN
+        else:
+            return flop*len(x)*3
+    return func
 
 
 class FedReg(Server):
@@ -194,24 +108,12 @@ class FedReg(Server):
             np.random.seed(r)
             active_clients = np.random.choice(selected_clients, round(self.clients_per_round*(1.0-self.drop_percent)), replace=False)
 
-            self.fakedata = None
             csolns = []
 
-            if isinstance(self.gamma, float):
-                gamma = self.gamma
-            else:
-                gamma = self.gamma(r)
-
-            if isinstance(self.eta_s, float):
-                eta_s = self.eta_s
-            else:
-                eta_s = self.eta_s(r)
-            sf = partial(step_func,  gamma=gamma, eta_s=eta_s, add_mask=self.add_mask)
-            rf = partial(run_func, epochs=epochs, func=sf)
             w = 0
             for idx, c in enumerate(active_clients):
                 c.set_param(self.model.get_param())
-                soln, stats = rf(c)
+                soln, stats = c.solve_inner(num_epochs=self.num_epochs, step_func=partial(step_func, fed=self))
                 soln = [1.0, soln[1]]
                 w += soln[0]
                 if len(csolns) == 0:
