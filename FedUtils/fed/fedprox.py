@@ -1,15 +1,34 @@
+from functools import partial
 from .server import Server
 from loguru import logger
 import numpy as np
 from FedUtils.models.utils import decode_stat
+import torch
+
+
+def step_func(model, data, fed):
+    lr = model.learning_rate
+    parameters = list(model.parameters())
+    flop = model.flop
+    gamma, old_parameters = fed.gamma, list(fed.model.parameters())
+
+    def func(d):
+        nonlocal lr, flop, gamma
+        model.train()
+        model.zero_grad()
+        x, y = d
+        pred = model.forward(x)
+        loss = model.loss(pred, y).mean()
+        for p, op in zip(parameters, old_parameters):
+            loss += ((p-op.detach())**2).sum()*gamma
+        grad = torch.autograd.grad(loss, parameters)
+        for p, g in zip(parameters, grad):
+            p.data.add_(-lr*g)
+        return flop*len(x)  # only consider the flop in NN
+    return func
 
 
 class FedProx(Server):
-    def extra_loss(self, model, loss, pred):
-        for param, paramgt in zip(model.parameters(), self.model.parameters()):
-            loss += ((param-paramgt.detach())**2).sum()*self.gamma
-        return loss.float()
-
     def train(self):
         logger.info("Train with {} workers...".format(self.clients_per_round))
         for r in range(self.num_rounds):
@@ -34,7 +53,7 @@ class FedProx(Server):
 
             for idx, c in enumerate(active_clients):
                 c.set_param(self.model.get_param())
-                soln, stats = c.solve_inner(num_epochs=self.num_epochs, extra_loss=self.extra_loss)  # stats has (byte w, comp, byte r)
+                soln, stats = c.solve_inner(num_epochs=self.num_epochs, step_func=partial(step_func, fed=self))  # stats has (byte w, comp, byte r)
                 soln = [1.0, soln[1]]
                 w += soln[0]
                 if len(csolns) == 0:

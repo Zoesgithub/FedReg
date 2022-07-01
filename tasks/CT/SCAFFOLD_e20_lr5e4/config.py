@@ -27,7 +27,7 @@ config = {
     "model": DenseNetModel,
     "inner_opt": partial(Optim, lr=5e-4, weight_decay=0),
     "optimizer": SCAFFOLD,
-    "model_param": (),
+    "model_param": (2,),
     "inp_size": (3*244*244,),
     "train_path": "data/COVID-CT/train/",
     "test_path": ["data/COVID-CT/valid/", "data/COVID-CT/test/"],

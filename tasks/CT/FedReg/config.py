@@ -24,10 +24,10 @@ transform_test = transforms.Compose([
 config = {
 
     "seed": 1,
-    "model": DenseNetModel,
-    "inner_opt": partial(torch.optim.SGD, lr=5e-3, weight_decay=0),
+    "model": partial(DenseNetModel, learning_rate=5e-3, p_iters=10, ps_eta=1e-6, pt_eta=1e-8),
+    "inner_opt": None,
     "optimizer": FedReg,
-    "model_param": (),
+    "model_param": (2,),
     "inp_size": (3*244*244,),
     "train_path": "data/COVID-CT/train/",
     "test_path": ["data/COVID-CT/valid/", "data/COVID-CT/test/"],
@@ -42,9 +42,5 @@ config = {
     "train_transform": transform_train,
     "test_transform": transform_test,
     "eval_train": True,
-    "gamma": 0.5,
-    "eta_s": -1e-6,
-
-
-
+    "gamma": 0.5
 }

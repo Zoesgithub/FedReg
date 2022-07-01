@@ -6,8 +6,8 @@ from torch.optim import SGD
 config = {
 
     "seed": 1,
-    "model": Model,
-    "inner_opt": partial(SGD, lr=2.0e-1),
+    "model": partial(Model, learning_rate=2e-1, p_iters=10, ps_eta=5e-2, pt_eta=5e-4),
+    "inner_opt": None,
     "optimizer": FedReg,
     "model_param": (10,),
     "inp_size": (784,),
@@ -25,7 +25,4 @@ config = {
     "test_transform": None,
     "eval_train": False,
     "gamma": 0.4,
-    "eta_s": -5e-2,
-
-
 }

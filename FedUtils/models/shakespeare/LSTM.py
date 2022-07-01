@@ -7,10 +7,12 @@ import random
 
 
 class Attack(object):
-    def __init__(self, rep_idx, large_iters, small_iters):
+    def __init__(self, min_idx, max_idx, rep_idx, ps_iters, pt_iters):
+        self.min_idx = min_idx
+        self.max_idx = max_idx
         self.rep_idx = rep_idx  # default word for replacement
-        self.large_iters = large_iters  # the number of iters to generate psuedo data
-        self.small_iters = small_iters  # the number of iters to generate perturbed data
+        self.ps_iters = ps_iters  # the number of iters to generate psuedo data
+        self.pt_iters = pt_iters  # the number of iters to generate perturbed data
 
     def perturb(self, x):
         x = np.copy(x)
@@ -18,21 +20,21 @@ class Attack(object):
 
         for idx in range(batchsize):
             replace_idx = random.randint(0, length-1)
-            x[idx, replace_idx] = self.rep_idx
+            x[idx, replace_idx] = random.randint(self.min_idx, self.max_idx-1)
         return x
 
     def generate_adversary(self, x, y):
-        large_adv, small_adv = x, x
+        psuedo, perturb = x, x
 
-        for _ in range(self.large_iters):
-            large_adv = self.perturb(large_adv)
-        for _ in range(self.small_iters):
-            small_adv = self.perturb(small_adv)
-        return large_adv, small_adv
+        for _ in range(self.ps_iters):
+            psuedo = self.perturb(psuedo)
+        for _ in range(self.pt_iters):
+            perturb = self.perturb(perturb)
+        return psuedo, perturb
 
 
 class Model(nn.Module):
-    def __init__(self, num_classes, optimizer=None, learning_rate=None, seed=1, large_iters=40, small_iters=10):
+    def __init__(self, num_classes, optimizer=None, learning_rate=None, seed=1, ps_iters=40, pt_iters=10):
         super(Model, self).__init__()
         self.num_classes = num_classes
         self.num_inp = 80
@@ -49,7 +51,7 @@ class Model(nn.Module):
         else:
             assert learning_rate, "should provide at least one of optimizer and learning rate"
             self.learning_rate = learning_rate
-        self.attack = Attack(self.num_classes, large_iters=large_iters, small_iters=small_iters)
+        self.attack = Attack(0, self.num_classes-1, self.num_classes, ps_iters=ps_iters, pt_iters=pt_iters)
 
         if torch.cuda.device_count() > 0:
             self.embed = self.embed.cuda()
@@ -63,7 +65,7 @@ class Model(nn.Module):
     def get_param(self):
         return self.state_dict()
 
-    def generate_fake(self, x, y):
+    def generate_fake(self, x, y):  # generate adversary by randomly set word as empty
         psuedo, perturb = self.attack.generate_adversary(x.long().detach().cpu().numpy(), y.cpu().numpy())
         psuedo, perturb = torch.tensor(psuedo).to(self.embed.weight.device), torch.tensor(perturb).to(self.embed.weight.device)
         psuedo_y, perturb_y = self.predict(psuedo), self.predict(perturb)
@@ -103,7 +105,7 @@ class Model(nn.Module):
         loss = self.loss(pred, y).mean()
         loss.backward()
         self.optimizer.step()
-        return loss
+        return self.flop*len(x)
 
     def solve_inner(self, data, step_func=None, num_epochs=1):  # step_func should by a closure whose input is (model, data) and output is a callable func to carry out training
         comp = 0.0
@@ -138,5 +140,7 @@ class Model(nn.Module):
             pred_max = pred.argmax(-1).float().squeeze(1)
             assert len(pred_max.shape) == len(y.shape)
             assert len(y.shape) == 1
+            if pred_max.device != y.device:
+                pred_max = pred_max.detach().to(y.device)
             tot_correct += (pred_max == y).float().sum()
         return tot_correct, loss

@@ -1,22 +1,31 @@
 from torch import nn
-from FedUtils.models.utils import Flops
+from FedUtils.models.utils import Flops, FSGM
 import torch
 import sys
 from .densenet_norm_ import densenet121
 
 
 class DenseNetModel(nn.Module):
-    def __init__(self, optimizer, seed=1):
+    def __init__(self, num_classes, optimizer=None, learning_rate=None, seed=1, p_iters=10, ps_eta=0.1, pt_eta=0.001):
         super(DenseNetModel, self).__init__()
-        self.num_classes = 2
-        self.num_inp = 244*244*3
+        self.num_classes = num_classes
+        self.num_inp = 224*224*3
         torch.manual_seed(123+seed)
 
-        self.net = densenet121(num_classes=self.num_classes)  # DenseNet(num_classes=2)#FixupResNet(FixupBasicBlock, [4,4,4,4], 2)
+        self.net = densenet121(num_classes=self.num_classes)
         self.size = sys.getsizeof(self.state_dict())
         self.softmax = nn.Softmax(-1)
-        self.optimizer = optimizer(params=self.parameters())
-        self.iters = 0
+
+        if optimizer is not None:
+            self.optimizer = optimizer(self.parameters())
+        else:
+            assert learning_rate, "should provide at least one of optimizer and learning rate"
+            self.learning_rate = learning_rate
+
+        self.p_iters = p_iters
+        self.ps_eta = ps_eta
+        self.pt_eta = pt_eta
+
         self.flop = Flops(self, torch.tensor([[0.0 for _ in range(self.num_inp)]]))
         if torch.cuda.device_count() > 0:
             self.net = self.net.cuda()
@@ -28,9 +37,27 @@ class DenseNetModel(nn.Module):
     def get_param(self):
         return self.state_dict()
 
-    def __loss(self, pred, gt):
+    def predict(self, x):
+        self.eval()
+        with torch.no_grad():
+            return self.softmax(self.forward(x))
+
+    def generate_fake(self, x, y):
+        self.eval()
+        psuedo, perturb = x.detach(), x.detach()
+        if psuedo.device != next(self.parameters()).device:
+            psuedo = psuedo.to(next(self.parameters()).device)
+            perturb = perturb.to(next(self.parameters()).device)
+        psuedo = FSGM(self, psuedo, y, self.p_iters, self.ps_eta)
+        perturb = FSGM(self, perturb, y, self.p_iters, self.pt_eta)
+        psuedo_y, perturb_y = self.predict(psuedo), self.predict(perturb)
+        return [psuedo, y, psuedo_y], [perturb, y, perturb_y]
+
+    def loss(self, pred, gt):
         pred = self.softmax(pred)
-        if len(gt.shape) < 2:
+        if gt.device != pred.device:
+            gt = gt.to(pred.device)
+        if len(gt.shape) != len(pred.shape):
             gt = nn.functional.one_hot(gt.long(), self.num_classes).float()
         assert len(gt.shape) == len(pred.shape)
         loss = -gt*torch.log(pred+1e-12)
@@ -38,61 +65,40 @@ class DenseNetModel(nn.Module):
         return loss
 
     def forward(self, data):
-        # print(data.shape)
-        if len(data.shape) == 2:
-            data = data.reshape(-1, 3, 244, 244)
+        if data.device != next(self.parameters()).device:
+            data = data.to(next(self.parameters()).device)
+        data = data.reshape(-1, 3, 224, 224)
         out = self.net(data)
-        # print(out.shape)
-        # out=self.softmax(out)
         return out
 
-    def train_onestep(self, data, extra_loss=None):
+    def train_onestep(self, data):
         self.train()
+        self.zero_grad()
         self.optimizer.zero_grad()
         x, y = data
         pred = self.forward(x)
-        loss = self.__loss(pred, y).mean()
-        if not extra_loss is None:
-            loss = extra_loss(self, loss, data)
+        loss = self.loss(pred, y).mean()
         loss.backward()
         self.optimizer.step()
-        self.zero_grad()
 
-        return loss
+        return self.flop*len(x)
 
-    def get_gradients(self, data):
-        x, y = data
-        x = torch.autograd.Variable(x).cuda()
-        y = torch.autograd.Variable(y).cuda()
-        loss = self.__loss(self.forward(x), y)
-        grad = torch.autograd.grad(loss, x)
-        flops = self.flop
-        return grad, flops
-
-    def solve_inner(self, data, num_epochs=1, extra_loss=None, step_func=None):
+    def solve_inner(self, data, num_epochs=1, step_func=None):
         comp = 0.0
         weight = 1.0
         steps = 0
-        if step_func:
-            for g in self.optimizer.param_groups:
-                lr = g["lr"]
-                break
-            comp, weight = step_func(self, data, num_epochs, lr)
+        if step_func is None:
+            func = self.train_onestep
         else:
-            for _ in range(num_epochs):
-                for x, y in data:
-                    self.train_onestep([x, y], extra_loss)
-                    comp += self.flop*len(x)
-                    steps += 1.0
+            func = step_func(self, data)
 
+        for _ in range(num_epochs):
+            for x, y in data:
+                c = func([x, y])
+                comp += c
+                steps += 1.0
         soln = self.get_param()
         return soln, comp, weight
-
-    def solve_iters(self, data):
-        self.train_onestep(data)
-        soln = self.get_param()
-        comp = self.flop
-        return soln, comp
 
     def test(self, data):
         tot_correct = 0.0
@@ -102,8 +108,10 @@ class DenseNetModel(nn.Module):
             x, y = d
             with torch.no_grad():
                 pred = self.forward(x)
-            loss += self.__loss(pred, y).sum()
+            loss += self.loss(pred, y).sum()
             pred_max = pred.argmax(-1).float()
             assert len(pred_max.shape) == len(y.shape)
+            if pred_max.device != y.device:
+                pred_max = pred_max.detach().to(y.device)
             tot_correct += (pred_max == y).float().sum()
         return tot_correct, loss

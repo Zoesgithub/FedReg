@@ -23,10 +23,10 @@ transform_test = transforms.Compose([
 config = {
 
     "seed": 1,
-    "model": DenseNetModel,
-    "inner_opt": partial(torch.optim.SGD, lr=1e-1, weight_decay=0),
+    "model": partial(DenseNetModel, learning_rate=1e-1),
+    "inner_opt": None,
     "optimizer": FedAvg,
-    "model_param": (),
+    "model_param": (2028,),
     "inp_size": (3*64*64,),
     "train_path": "data/landmarks/train/",
     "test_path": ["data/landmarks/valid/", "data/landmarks/test/"],

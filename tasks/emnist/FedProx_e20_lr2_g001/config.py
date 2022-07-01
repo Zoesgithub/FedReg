@@ -6,8 +6,8 @@ from FedUtils.fed.fedprox import FedProx
 config = {
 
     "seed": 1,
-    "model": Model,
-    "inner_opt": partial(torch.optim.SGD, lr=2e-1),
+    "model": partial(Model, learning_rate=2e-1),
+    "inner_opt": None,
     "optimizer": FedProx,
     "model_param": (10,),
     "inp_size": (784,),

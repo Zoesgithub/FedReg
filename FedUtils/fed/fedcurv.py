@@ -1,33 +1,35 @@
 from .server import Server
 from loguru import logger
 import numpy as np
-import torch.nn as nn
 from FedUtils.models.utils import decode_stat
 import torch
+from functools import partial
 
 
-def loss_func_nosoft(pred, gt):
-    if len(gt.shape) < 2:
-        gt = nn.functional.one_hot(gt.long(), pred.shape[-1]).float()
-    assert len(gt.shape) == len(pred.shape)
-    loss = -gt * torch.log(pred + 1e-30)
-    loss = loss.sum(1)
-    return loss
+def step_func(model, data, fed):
+    lr = model.learning_rate
+    parameters = list(model.parameters())
+    flop = model.flop
+    fisher, theta_fisher, gamma = fed.fisher, fed.theta_fisher, fed.gamma
 
-
-def loss_func(pred, gt):
-    pred = nn.Softmax(-1)(pred)
-    return loss_func_nosoft(pred, gt)
+    def func(d):
+        nonlocal lr, flop, gamma
+        model.train()
+        model.zero_grad()
+        x, y = d
+        pred = model.forward(x)
+        loss = model.loss(pred, y).mean()
+        if fisher is not None:
+            for p, f, tf in zip(parameters, fisher, theta_fisher):
+                loss += ((p**2*f)*gamma-2*gamma*tf*p).sum()
+        grad = torch.autograd.grad(loss, parameters)
+        for p, g in zip(parameters, grad):
+            p.data.add_(-lr*g)
+        return flop*len(x)  # only consider the flop in NN
+    return func
 
 
 class FedCurv(Server):
-    def extra_loss(self, model, loss, pred):
-        if self.fisher is None:
-            return loss
-        for param, f, theta_f in zip(model.parameters(), self.fisher, self.theta_fisher):
-            loss += ((param**2*f)*self.gamma-2*self.gamma*theta_f*param).sum()
-        return loss.float()
-
     def train(self):
         logger.info("Train with {} workers...".format(self.clients_per_round))
         self.fisher = None
@@ -55,7 +57,7 @@ class FedCurv(Server):
             temp_theta_fisher = None
             for idx, c in enumerate(active_clients):
                 c.set_param(self.model.get_param())
-                soln, stats = c.solve_inner(num_epochs=self.num_epochs, extra_loss=self.extra_loss)  # stats has (byte w, comp, byte r)
+                soln, stats = c.solve_inner(num_epochs=self.num_epochs, step_func=partial(step_func, fed=self))  # stats has (byte w, comp, byte r)
                 soln = [1.0, soln[1]]
                 w += soln[0]
                 if len(csolns) == 0:
@@ -72,7 +74,7 @@ class FedCurv(Server):
                     c.model.eval()
                     gradients = []
                     for i in range(len(x)):
-                        loss = loss_func(c.model(x[i].unsqueeze(0)), y[i].unsqueeze(0)).squeeze()
+                        loss = c.model.loss(c.model(x[i].unsqueeze(0)), y[i].unsqueeze(0)).squeeze()
                         gradient = torch.autograd.grad(loss, c.model.parameters())
                         with torch.no_grad():
                             gradients.append([_.detach() for _ in gradient])

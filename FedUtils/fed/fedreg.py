@@ -91,7 +91,6 @@ class FedReg(Server):
         for r in range(self.num_rounds):
             self.round = r
 
-            print(epochs)
             if r % self.eval_every == 0:
                 logger.info("-- Log At Round {} --".format(r))
                 stats = self.test()

@@ -20,10 +20,10 @@ transform_test = transforms.Compose([
 config = {
 
     "seed": 1,
-    "model": Model,
-    "inner_opt": partial(torch.optim.SGD, lr=10e-2),
+    "model": partial(Model, learning_rate=1e-1, p_iters=10, ps_eta=1e-1, pt_eta=1e-3),
+    "inner_opt": None,
     "optimizer": FedReg,
-    "model_param": (10,),
+    "model_param": (100,),
     "inp_size": (3*32*32,),
     "train_path": "data/cifar-100-python/data/train/",
     "test_path": ["data/cifar-100-python/data/valid/", "data/cifar-100-python/data/test/"],
@@ -38,7 +38,6 @@ config = {
     "train_transform": transform_train,
     "test_transform": transform_test,
     "eval_train": False,
-    "gamma": 0.25,  # beta_func,
-    "eta_s": -1e-1,  # beta_func
+    "gamma": 0.25,
 
 }

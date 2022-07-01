@@ -6,8 +6,8 @@ from FedUtils.fed.fedcurv import FedCurv
 config = {
 
     "seed": 1,
-    "model": Model,
-    "inner_opt": partial(torch.optim.SGD, lr=1e-1, weight_decay=0.0),
+    "model": partial(Model, learning_rate=1e-1),
+    "inner_opt": None,
     "optimizer": FedCurv,
     "model_param": (10,),
     "inp_size": (784,),

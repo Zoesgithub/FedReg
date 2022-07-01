@@ -20,8 +20,8 @@ transform_test = transforms.Compose([
 config = {
 
     "seed": 1,
-    "model": Model,
-    "inner_opt": partial(SGD, lr=0.5e-1),
+    "model": partial(Model, learning_rate=5e-2, p_iters=10, ps_eta=1e-1, pt_eta=1e-3),
+    "inner_opt": None,
     "optimizer": FedReg,
     "model_param": (10,),
     "inp_size": (3*32*32,),
@@ -39,7 +39,5 @@ config = {
     "test_transform": transform_test,
     "eval_train": False,
     "gamma": 0.5,
-    "eta_s": -1e-1
-
 
 }

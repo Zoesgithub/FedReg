@@ -20,8 +20,8 @@ transform_test = transforms.Compose([
 config = {
 
     "seed": 1,
-    "model": Model,
-    "inner_opt": partial(torch.optim.SGD, lr=1e-1, weight_decay=0),
+    "model": partial(Model, learning_rate=1e-1),
+    "inner_opt": None,
     "optimizer": FedAvg,
     "model_param": (10,),
     "inp_size": (3*32*32,),

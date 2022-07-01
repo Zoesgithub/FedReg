@@ -20,8 +20,7 @@ class Server(object):
             self.gamma = config["gamma"]
         else:
             self.gamma = 1.0
-        if "eta_s" in config:
-            self.eta_s = config["eta_s"]
+
         if "add_mask" in config:
             self.add_mask = config["add_mask"]
         else:

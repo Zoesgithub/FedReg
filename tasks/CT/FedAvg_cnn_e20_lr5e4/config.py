@@ -26,10 +26,10 @@ transform_test = transforms.Compose([
 config = {
 
     "seed": 1,
-    "model": Model,
-    "inner_opt": partial(torch.optim.SGD, lr=5e-4, weight_decay=0),
+    "model": partial(Model, learning_rate=5e-4),
+    "inner_opt": None,
     "optimizer": FedAvg,
-    "model_param": (),
+    "model_param": (2,),
     "inp_size": (3*244*244,),
     "train_path": "data/COVID-CT/train/",
     "test_path": ["data/COVID-CT/valid/", "data/COVID-CT/test/"],
@@ -44,8 +44,5 @@ config = {
     "train_transform": transform_train,
     "test_transform": transform_test,
     "eval_train": True,
-    # "add_mask":True
-
-
 
 }

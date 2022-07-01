@@ -9,6 +9,16 @@ from PIL import Image
 import h5py
 
 
+def FSGM(model, inp, label, iters, eta):
+    inp.requires_grad = True
+    minv, maxv = float(inp.min().detach().cpu().numpy()), float(inp.max().detach().cpu().numpy())
+    for _ in range(iters):
+        loss = model.loss(model.forward(inp), label).mean()
+        dp = torch.sign(torch.autograd.grad(loss, inp)[0])
+        inp.data.add_(eta*dp.detach()).clamp(minv, maxv)
+    return inp
+
+
 class CusDataset(TensorDataset):
     def __init__(self, data, transform=None):
         assert "x" in data
@@ -18,12 +28,9 @@ class CusDataset(TensorDataset):
         self.data["y"] = (data["y"])
         self.transform = transform
 
-        self.data1 = None
-        self.data2 = None
-
     def __getitem__(self, item):
         if self.transform is None:
-            ret = torch.tensor(self.data['x'][item]).cuda()
+            ret = torch.tensor(self.data['x'][item])
         else:
             ret = np.array(self.data["x"][item]).astype("uint8")
             if ret.shape[-1] == 3:
@@ -32,28 +39,12 @@ class CusDataset(TensorDataset):
                 ret = ret.transpose(1, 2, 0)
             else:
                 ret = ret
-            ret = self.transform(Image.fromarray(ret)).cuda()
-        if self.data1 is None:
-            return [ret, torch.tensor(self.data["y"][item]).cuda()]
-        else:
-            x1, _, y1 = self.data1[item]
-            x2, y2, _ = self.data2[item]
-            return [ret, torch.tensor(self.data["y"][item]).cuda()], [x1[0], y1[0]], [x2[0], y2[0]]
+            ret = self.transform(Image.fromarray(ret))
+
+        return [ret, torch.tensor(self.data["y"][item])]
 
     def __len__(self):
         return len(self.data["x"])
-
-    def set_psuedo_data(self, data1, data2):
-        self.data1 = data1
-        self.data2 = data2
-
-    def get_total_data(self):
-        ret = []
-        self.data1 = None
-        self.data2 = None
-        for i in range(len(self.data["x"])):
-            ret.append(self.__getitem__(i))
-        return ret
 
 
 class ImageDataset(TensorDataset):
@@ -76,42 +67,23 @@ class ImageDataset(TensorDataset):
         else:
             self.image_path = h5py.File(image_path, "r")
 
-        self.data1 = None
-        self.data2 = None
-
     def __getitem__(self, item):
         path = self.data["x"][item]
         path = path.replace(".png", "")
         image, y = Image.fromarray((np.array(self.image_path[path+"_X"])*255).transpose(1, 2, 0).astype(np.uint8)), self.image_path[path+"_Y"]
         if self.transform is None:
-            ret = torch.tensor(image)  # .cuda()
+            ret = torch.tensor(image)
         else:
             try:
                 assert image.mode == "RGB"
             except:
                 image = image.convert("RGB")
-            ret = self.transform(image)  # .cuda()
-        if self.data1 is None:
-            return [ret, torch.tensor(self.data["y"][item])]
-        else:
-            x1, _, y1 = self.data1[item]
-            x2, y2, _ = self.data2[item]
-            return [ret, torch.tensor(self.data["y"][item])], [x1[0], y1[0]], [x2[0], y2[0]]
+            ret = self.transform(image)
+
+        return [ret, torch.tensor(self.data["y"][item])]
 
     def __len__(self):
         return len(self.data["x"])
-
-    def set_psuedo_data(self, data1, data2):
-        self.data1 = data1
-        self.data2 = data2
-
-    def get_total_data(self):
-        ret = []
-        self.data1 = None
-        self.data2 = None
-        for i in range(len(self.data["x"])):
-            ret.append(self.__getitem__(i))
-        return ret
 
 
 def Flops(model, inp):

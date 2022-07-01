@@ -70,7 +70,6 @@ class FedAvg(Server):
         logger.info("-- Log At Round {} --".format(r))
         stats = self.test()
         if self.eval_train:
-            print(self.eval_train)
             stats_train = self.train_error_and_loss()
         else:
             stats_train = stats
