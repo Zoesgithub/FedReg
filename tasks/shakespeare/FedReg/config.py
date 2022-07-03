@@ -3,7 +3,7 @@ from functools import partial
 from FedUtils.fed.fedreg import FedReg
 config = {
     "seed": 1,
-    "model": partial(Model, learning_rate=1, ps_iters=80, pt_iters=15),
+    "model": partial(Model, learning_rate=1, ps_iters=40, pt_iters=0),
     "inner_opt": None,
     "optimizer": FedReg,
     "model_param": (77,),
@@ -21,6 +21,6 @@ config = {
     "train_transform": None,
     "test_transform": None,
     "eval_train": False,
-    "gamma": .5,
+    "gamma": 1.,
 
 }

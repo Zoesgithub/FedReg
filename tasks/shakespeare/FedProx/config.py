@@ -6,7 +6,7 @@ from FedUtils.fed.fedprox import FedProx
 config = {
 
     "seed": 1,
-    "model":  partial(Model, learning_rate=1, ps_iters=40, pt_iters=10),
+    "model":  partial(Model, learning_rate=1, ps_iters=None, pt_iters=None),
     "inner_opt": None,
     "optimizer": FedProx,
     "model_param": (77,),
