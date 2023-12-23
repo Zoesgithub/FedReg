@@ -24,7 +24,7 @@ Install related packages:
 pip install -r requirements.txt
 ~~~
 
-Get data from [here](https://drive.google.com/file/d/1gFhhCuQIfYDhVxQ5eTftyt1N3Y2O8qZt/view?usp=sharing) and unzip it:
+Get data from [here](https://drive.google.com/file/d/1w6L9enAEB8e0rsJKDoRfoVDmOm-vfaXg/view?usp=sharing) and unzip it:
 ~~~
 tar -xzvf data.tar.gz
 ~~~
